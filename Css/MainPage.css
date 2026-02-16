@@ -1,0 +1,95 @@
+/*#region Global*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Candara, 'Times New Roman', serif;
+}
+:root {
+    /*font sizes*/
+    --font-size-base: 1.15rem;
+    --font-size-title: 2rem;
+    --font-size-mb-base: 3rem;
+    --font-size-title-lg: 4rem;
+    /* Colors*/
+    --primary-color: black;
+    --Secondary-color: white;
+    --tertiary-color: gray;
+}
+/*#endregion*/
+/*#region Nav*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 2px solid var(--tertiary-color);
+    background-color: var(--primary-color);
+    & .logo{
+        max-width: 8vw;
+        max-height: 8vh;
+    }
+    & .logo-letters{
+        display: none;
+        max-width: 8vw;
+        max-height: 8vh;
+    }
+    & p{
+        color: var(--Secondary-color);
+        display: none;
+    }
+}
+/*#endregion*/
+/*#region Drop Down Menu*/
+.dropdown {
+    position: relative;
+    & .dropbtn {
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: 0.3s;
+        max-width: 4vw;
+        max-height: 4vh;
+        &:active {background-color: var(--Secondary-color);}
+    }
+    & .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: var(--primary-color);
+        min-width: 200px;
+        border: 1px solid white;
+        border-radius: 10px;
+        margin-top: 5px;
+        &.show {display: block;}
+        & a {
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: block;
+            transition: 0.2s;
+            font-size: var(--font-size-base);
+            &:hover {
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+}
+/*#endregion*/
+/*#region Mobile View*/
+@media screen and (max-width: 1024px) {
+    nav{
+        padding: 3rem;
+        .logo{display: none;}
+        .logo-letters{display: block; max-height: 20vh; max-width: 20vw}
+        .dropdown .dropbtn {max-width: 8vw; max-height: 8vh;}
+        .dropdown .dropdown-content {min-width: 40vw; }
+        .dropdown .dropdown-content.show { display: flex; flex-direction: column; justify-content: center; gap:2rem; }
+        .dropdown .dropdown-content a { font-size: var(--font-size-mb-base); text-align: center; }
+        .dropdown .dropdown-content a:hover { background: transparent; color: white; }
+    }
+}
+/*#endregion*/

@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Greek on the street</title>
+    <link rel="stylesheet" href="Css/MainPage.css">
 </head>
 <body>
-
+<nav class="Nav-Bar">
+    <img class="logo" src="/Images/Greekonthestreet-Logo.png" alt="Greek on The Street">
+    <img class="logo-letters" src="/Images/logo-letters.png" alt="Greek on the Street">
+    <p>greek on the street</p>
+    <div class="Nav-Bar-Items-left">
+        <div class="dropdown">
+            <img src="/Images/Icons/white-burger-bar.png" alt="Menu" class="dropbtn" onclick="toggleMenu()">
+            <div class="dropdown-content" id="navDropdown">
+                <a href="">Over ons</a>
+                <a href="">Ons Menu</a>
+                <a href="">Contact</a>
+            </div>
+        </div>
+    </div>
+</nav>
 </body>
+<script src="JS/DropDownMenu.js"></script>
 </html>
