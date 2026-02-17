@@ -8,9 +8,9 @@
 :root {
     /*font sizes*/
     --font-size-base: 1.15rem;
-    --font-size-title: 2rem;
-    --font-size-mb-base: 2.5rem;
-    --font-size-mb-tittle: 3.5rem;
+    --font-size-title: 1.5rem;
+    --font-size-mb-base: 2rem;
+    --font-size-mb-tittle: 3rem;
     /* Colors*/
     --primary-color: black;
     --Secondary-color: white;
@@ -140,6 +140,6 @@ nav{
     .container {padding: 40px 20px; gap: 1rem;}
     .container h2 {font-size: var(--font-size-mb-tittle);}
     .container p {font-size: var(--font-size-mb-base);text-align: center;}
-    .container p:first-of-type {font-size:2.75rem ;}
+    .container p:first-of-type {font-size:2.25rem ;}
 }
 /*#endregion*/
